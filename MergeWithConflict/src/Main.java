@@ -1,5 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Mensaje final: main + feature");
+<<<<<<< HEAD
+        System.out.println("Mensaje desde main");
+=======
+        System.out.println("Mensaje desde feature");
+>>>>>>> feature/mensaje1
     }
 }
