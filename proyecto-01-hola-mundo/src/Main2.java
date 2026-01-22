@@ -1,4 +1,4 @@
-public class Main {
+public class Main2 {
     public static void main(String[] args){
         System.out.println("Nombre : Angel Rafael Flores Avilez");
         System.out.println("Grupo : 2E");
