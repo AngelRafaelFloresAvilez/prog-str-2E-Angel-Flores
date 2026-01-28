@@ -90,6 +90,11 @@ public class Menu {
      */
     public static double obtenerDouble(Scanner sc, String mensaje){
         System.out.println(mensaje);
+        while (!sc.hasNextDouble()) {
+            System.out.println("El valor que ingresaste es invalido, intenta de nuevo.");
+            sc.next();
+            System.out.println(mensaje);
+        }
         return sc.nextDouble();
     }
 
