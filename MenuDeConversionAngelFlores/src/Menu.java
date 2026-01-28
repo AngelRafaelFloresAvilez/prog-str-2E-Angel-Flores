@@ -83,7 +83,7 @@ public class Menu {
 
 
     /**
-     * Metodo que obtiene el valor ingresado por el usuario
+     * Metodo que obtiene el valor ingresado por el usuario y lo valida para comprobar que es del tipo qe necesita
      * @param sc -> El objeto para poder leer lo que escriba el usuario
      * @param mensaje -> El texto que se mostrara y proveniente de println
      * @return -> Regresa el valor leido del usuario
