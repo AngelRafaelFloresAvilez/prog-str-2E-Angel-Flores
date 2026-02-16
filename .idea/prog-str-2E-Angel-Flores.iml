@@ -12,6 +12,7 @@
       <sourceFolder url="file://$MODULE_DIR$/CotizadorEnvioAngelFlores/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ControlCalificacionesAngelFlores/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CrudSimpleAngelFlores/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CrudReportesAngelFlores/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
