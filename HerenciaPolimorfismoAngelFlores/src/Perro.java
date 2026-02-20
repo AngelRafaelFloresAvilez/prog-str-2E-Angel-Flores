@@ -5,10 +5,10 @@ public class Perro extends Animal{
     }
     @Override
     public void hacerSonido(){
-        System.out.println(getNombre()+ "Esta ladrando");
+        System.out.println(getNombre()+ " esta ladrando");
     }
 
     public void marcarTerritorio(){
-        System.out.println(getNombre() + "Esta alanzado la patita");
+        System.out.println(getNombre() + " esta alzando la patita");
     }
 }

@@ -6,7 +6,7 @@ public class MainClass {
         //Herencia
         botas.comer();
         botas.hacerSonido();
-        System.out.println("-------------------");
+        System.out.println("---------------------------");
         bruno.comer();
         bruno.hacerSonido();
 
