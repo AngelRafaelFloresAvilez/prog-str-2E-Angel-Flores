@@ -14,6 +14,9 @@
       <sourceFolder url="file://$MODULE_DIR$/CrudSimpleAngelFlores/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CrudReportesAngelFlores/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HerenciaPolimorfismoAngelFlores/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/LoginDashboardAngelFlores" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/LoginDashboardAngelFlores/src/main/java/com" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/LoginDashboardAngelFlores/src/main/java/com/example/logindashboardangelflores" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

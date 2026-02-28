@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="25.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.logindashboardangelflores.controllers.HomeController">
+    <padding>
+        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+    </padding>
+   <Label text="Login de session" />
+    <Label text="Ingrese su usuario:" />
+    <TextField fx:id="txtUsuario" promptText="Ingresa el usuario" />
+   <Label text="Ingrese su correo:" />
+   <TextField fx:id="txtCorreo" promptText="Ingresa el correo" />
+   <Label text="Ingrese su contraseña:" />
+   <TextField fx:id="txtContra" promptText="Ingresa la contraseña" />
+    <Button onAction="#onValidate" text="Entrar" />
+    <Label fx:id="lblVa" />
+</VBox>
