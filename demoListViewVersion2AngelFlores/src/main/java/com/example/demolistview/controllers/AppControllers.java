@@ -11,6 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class AppControllers {
@@ -32,6 +33,11 @@ public class AppControllers {
     @FXML
     public void initialize(){
         loadFromFile();
+        listView.getSelectionModel().selectedItemProperty().addListener(
+                (obs, oldValue, newValue) ->{
+                    loadDataToForm(newValue);
+                }
+        );
         listView.setItems(data);
     }
 
@@ -64,6 +70,54 @@ public class AppControllers {
 
     }
 
+    @FXML
+    public void onUpdate(){
+        try{
+            int index = listView.getSelectionModel().getSelectedIndex();
+            String name = txtName.getText();
+            String email = txtEmail.getText();
+            String edad = txtEdad.getText();
+            lblMsg.setStyle("-fx-text-fill : green");
+            txtEmail.clear();
+            txtName.clear();
+            txtEdad.clear();
+            service.updatePerson(index, name, email, edad);
+            loadFromFile();
+            lblMsg.setText("Perona creada con nexito");
+        } catch (IOException e) {
+            lblMsg.setText("Error: " + e.getMessage());
+            lblMsg.setStyle("-fx-text-fill : red");
+        } catch (IllegalArgumentException e) {
+            lblMsg.setText("Error: " + e.getMessage());
+            lblMsg.setStyle("-fx-text-fill : red");
+        }
+    }
+
+    @FXML
+    public void onRemove() {
+        int index = listView.getSelectionModel().getSelectedIndex();
+        if (index < 0) {
+            lblMsg.setText("index menor a 0");
+            lblMsg.setStyle("-fx-text-fill: red");
+        }
+        try {
+            service.removePerson(index);
+            txtName.clear();
+            txtEmail.clear();
+            txtEdad.clear();
+            loadFromFile();
+            lblMsg.setText("Persona eliminada");
+            lblMsg.setStyle("-fx-text-fill: green");
+        } catch (IOException e) {
+            lblMsg.setText("Error: " + e.getMessage());
+            lblMsg.setStyle("-fx-text-fill : red");
+        } catch (IllegalArgumentException e) {
+            lblMsg.setText("Error: " + e.getMessage());
+            lblMsg.setStyle("-fx-text-fill : red");
+        }
+    }
+
+
     private void loadFromFile() {
         try{
             List<String> items = service.loadDataForListView();
@@ -76,4 +130,18 @@ public class AppControllers {
         }
 
     }
+
+    private void loadDataToForm(String data){
+        if(data == null){
+            lblMsg.setText("XXXX");
+        }else{
+            String[] parts = data.split(" - ");
+            txtName.setText(parts[0]);
+            txtEmail.setText(parts[1]);
+            txtEdad.setText(parts[2]);
+        }
+
+
+    }
+
 }
